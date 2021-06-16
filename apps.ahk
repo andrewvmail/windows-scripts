@@ -1,17 +1,20 @@
 #c:: 
-IfWinExist, ahk_class Chrome_WidgetWin_1
-	{	WinActivate
+IfWinExist, ahk_exe chrome.exe 
+	{	
+		WinActivate
 	}
 else
-	{	Run, C:\Documents and Settings\user\Local Settings\Application Data\Google\Chrome\Application\chrome.exe
+	{	Run, C:\Users\momo\Desktop\Google Chrome
 	}
 return 
 
 #w:: 
-IfWinExist, ahk_class SunAwtFrame
-	{	WinActivate
+IfWinExist, ahk_exe webstorm64.exe
+	{	
+		WinActivate
 	}
 else
-	{	Run, C:\Users\momo\Desktop\Webstorm
+	{	
+		Run, C:\Users\momo\Desktop\Webstorm 
 	}
 return 	
