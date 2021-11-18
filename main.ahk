@@ -11,6 +11,18 @@ SetTitleMatchMode, regex
 ; ctrl+backspace delete
 ^BS:: send, ^+{left}{delete}
 
+; always on top
+^SPACE::  Winset, Alwaysontop, , A
+
+
+^#!r::
+Send, ^s ; To save a changed script
+Sleep, 300 ; give it time to save the script
+Reload
+Return
+
+^!#e::Edit
+
 ; reload ahk scripts, mainly used in sublime 
 #IfWinActive, .*\.ahk*.
 ^r:: ; press control+r to reload
