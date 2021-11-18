@@ -8,6 +8,9 @@ SetTitleMatchMode, regex
 #include apps.ahk
 #include memo.ahk
 
+; ctrl+backspace delete
+^BS:: send, ^+{left}{delete}
+
 ; reload ahk scripts, mainly used in sublime 
 #IfWinActive, .*\.ahk*.
 ^r:: ; press control+r to reload
