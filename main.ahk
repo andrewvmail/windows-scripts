@@ -6,7 +6,6 @@ SetTitleMatchMode, regex
 
 #include vim.ahk
 #include apps.ahk
-#include memo.ahk
 
 ^F1::
 DetectHiddenWindows, Off
@@ -34,25 +33,21 @@ Return
   Send {LWin Down}{Left}{LWin Up}
 Return
 
-^#!r::
-Send, ^s ; To save a changed script
-Sleep, 300 ; give it time to save the script
-Reload
+
+; AHK EDIT
+
+^+r::
+  Send, ^s ; To save a changed script
+  Sleep, 300 ; give it time to save the script
+  Reload
 Return
 
-^!#e::Edit
+^+e::Edit
 
-; reload ahk scripts, mainly used in sublime 
-#IfWinActive, .*\.ahk*.
-^r:: ; press control+r to reload
-  Msgbox, Do you really want to reload this script?
-  ifMsgBox, Yes
-    Reload
-  Return
-
+; Same window toggle
 
 ; Based on https://superuser.com/a/768060/542406
-!`:: ; Next window
+!`:: ; Next window ALT + `
 WinGet, ActiveProcessName, ProcessName, A
 WinGet, WinClassCount, Count, ahk_exe %ActiveProcessName%
 IF WinClassCount = 1
@@ -62,7 +57,7 @@ WinSet, Bottom,, A
 WinActivate, ahk_exe %ActiveProcessName%
 return
 
-!+`:: ; Last window
+!+`:: ; Last window ALT + SHIFT + `
 WinGet, ActiveProcessName, ProcessName, A
 WinGet, WinClassCount, Count, ahk_exe %ActiveProcessName%
 IF WinClassCount = 1
