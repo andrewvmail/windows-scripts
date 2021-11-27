@@ -21,16 +21,26 @@ return
 ^BS:: send, ^+{left}{delete}
 
 ; always on top
-^SPACE::  Winset, Alwaysontop, , A
+^+SPACE::  Winset, Alwaysontop, , A
 
 ; ctrl+win+left(h)
-^#h::
+^+h::
   Send {LWin Down}{Left}{LWin Up}
 Return
 
 ; ctrl+win+right(h)
-^#l::
+^+l::
   Send {LWin Down}{Left}{LWin Up}
+Return
+
+; ctrl+win+up(j)
+^+j::
+  Send {LWin Down}{Down}{LWin Up}
+Return
+
+; ctrl+win+down(k)
+^+k::
+  Send {LWin Down}{Up}{LWin Up}
 Return
 
 
