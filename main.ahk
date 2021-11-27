@@ -8,12 +8,31 @@ SetTitleMatchMode, regex
 #include apps.ahk
 #include memo.ahk
 
+^F1::
+DetectHiddenWindows, Off
+WinGet, mylist, list
+Loop % mylist {
+   hwnd := mylist%A_Index%
+   ; msgbox % "Found window with HWND " hwnd
+   WinClose % "ahk_id" hwnd
+}
+return
+
 ; ctrl+backspace delete
 ^BS:: send, ^+{left}{delete}
 
 ; always on top
 ^SPACE::  Winset, Alwaysontop, , A
 
+; ctrl+win+left(h)
+^#h::
+  Send {LWin Down}{Left}{LWin Up}
+Return
+
+; ctrl+win+right(h)
+^#l::
+  Send {LWin Down}{Left}{LWin Up}
+Return
 
 ^#!r::
 Send, ^s ; To save a changed script
