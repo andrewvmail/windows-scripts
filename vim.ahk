@@ -1,15 +1,7 @@
-^j::
-   Send, {Down down}{Down up}
-Return
+^j:: Send { Down } 
 
-^k::
-   Send, {Up down}{Up up}
-Return
+^k:: Send { Up }
 
-^h::
-   Send, {Left down}{Left up}
-Return
+^h:: Send { Left }
 
-^l::
-   Send, {Right down}{Right up}
-Return
+^l:: Send { Right }
