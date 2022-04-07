@@ -6,11 +6,16 @@ SetTitleMatchMode, regex
 
 #include apps.ahk
 
+; don't use powertoys
+Capslock::Control
+Control::Esc
+Esc::`
+
 ; vim like movements
-^j:: Send {Blind}{Down}
-^k:: Send {Blind}{Up}
-^h:: Send {Blind}{Left}
-^l:: Send {Blind}{Right}
+^j:: Send {Down}
+^k:: Send {Up}
+^h:: Send {Left}
+^l:: Send {Right}
 
 ; Delete
 ^BS:: send, {Delete}
