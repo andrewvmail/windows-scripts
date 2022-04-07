@@ -2,19 +2,45 @@
 IfWinExist, ahk_exe chrome.exe 
 	{	
 		WinActivate
-	}
-else
-	{	Run, C:\Users\momo\Desktop\Google Chrome
-	}
-return 
+	} Return
 
 #w:: 
 IfWinExist, ahk_exe webstorm64.exe
 	{	
 		WinActivate
-	}
-else
+	} Return
+
+#v:: 
+IfWinExist, ahk_exe Code.exe
 	{	
-		Run, C:\Users\momo\Desktop\Webstorm 
-	}
-return 	
+		WinActivate
+	} Return
+
+#n:: 
+IfWinExist, ahk_exe Notepad.exe
+	{	
+		WinActivate
+	} Return
+
+#m:: 
+IfWinExist, ahk_exe WhatsApp.exe
+	{	
+		WinActivate
+	} Return
+
+#u:: 
+IfWinExist, ahk_exe ubuntu.exe
+	{	
+		WinActivate
+	} Return
+
+#g:: 
+IfWinExist, ahk_exe datagrip64.exe
+	{	
+		WinActivate
+	} Return
+#t:: 
+IfWinExist, ahk_exe Taskmgr.exe
+	{	
+		WinActivate
+	} Return

@@ -4,47 +4,21 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTitleMatchMode, regex
 
-#include vim.ahk
 #include apps.ahk
 
-^F1::
-DetectHiddenWindows, Off
-WinGet, mylist, list
-Loop % mylist {
-   hwnd := mylist%A_Index%
-   ; msgbox % "Found window with HWND " hwnd
-   WinClose % "ahk_id" hwnd
-}
-return
+; vim like movements
+^j:: Send {Blind}{Down}
+^k:: Send {Blind}{Up}
+^h:: Send {Blind}{Left}
+^l:: Send {Blind}{Right}
 
-; ctrl+backspace delete
-^BS:: send, ^+{left}{delete}
+; Delete
+^BS:: send, {Delete}
+Return
 
 ; always on top
 ^+SPACE::  Winset, Alwaysontop, , A
-
-; ctrl+win+left(h)
-^+h::
-  Send {LWin Down}{Left}{LWin Up}
 Return
-
-; ctrl+win+right(h)
-^+l::
-  Send {LWin Down}{Left}{LWin Up}
-Return
-
-; ctrl+win+up(j)
-^+j::
-  Send {LWin Down}{Down}{LWin Up}
-Return
-
-; ctrl+win+down(k)
-^+k::
-  Send {LWin Down}{Up}{LWin Up}
-Return
-
-
-; AHK EDIT
 
 ^+r::
   Send, ^s ; To save a changed script
@@ -53,6 +27,7 @@ Return
 Return
 
 ^+e::Edit
+Return
 
 ; Same window toggle
 
