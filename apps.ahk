@@ -39,8 +39,3 @@ IfWinExist, ahk_exe datagrip64.exe
 	{	
 		WinActivate
 	} Return
-#t:: 
-IfWinExist, ahk_exe Taskmgr.exe
-	{	
-		WinActivate
-	} Return

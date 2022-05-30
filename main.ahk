@@ -8,8 +8,6 @@ SetTitleMatchMode, regex
 
 ; don't use powertoys
 Capslock::LCtrl
-; LControl::Esc ; doesn't like espanso, use powertoys
-Esc::`
 
 ; dbl tap rctrl for esc
 ~LCtrl::
