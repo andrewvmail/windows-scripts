@@ -7,9 +7,15 @@ SetTitleMatchMode, regex
 #include apps.ahk
 
 ; don't use powertoys
-Capslock::Control
-Control::Esc
+Capslock::LCtrl
+; LControl::Esc ; doesn't like espanso, use powertoys
 Esc::`
+
+; dbl tap rctrl for esc
+~LCtrl::
+If (A_PriorHotKey = "~LCtrl" AND A_TimeSincePriorHotkey < 500)
+Send, {Esc}
+Return
 
 ; vim like movements
 ^j:: Send {Down}
