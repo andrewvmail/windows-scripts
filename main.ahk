@@ -16,6 +16,9 @@ Capslock::LCtrl
 ^h:: Send {Left}
 ^l:: Send {Right}
 
+; alt ctrl 4
+!^4:: Send !{f4}
+
 ; Delete
 ^BS:: send, {Delete}
 Return

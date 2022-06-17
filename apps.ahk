@@ -45,3 +45,21 @@ IfWinExist, ahk_exe cmd.exe
 	{	
 		WinActivate
 	} Return
+
+#s::
+IfWinExist, ahk_exe sublime_text.exe
+	{	
+		WinActivate
+	} Return
+
+#z::
+IfWinExist, ahk_exe powershell.exe
+	{	
+		WinActivate
+	} Return
+
+#f::
+IfWinExist, ahk_exe Fork.exe
+	{	
+		WinActivate
+	} Return
