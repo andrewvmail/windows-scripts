@@ -1,65 +1,66 @@
-#c:: 
+#c:: ;chrome 
 IfWinExist, ahk_exe chrome.exe 
 	{	
 		WinActivate
 	} Return
 
-#w:: 
+#w:: ;webstorm 
 IfWinExist, ahk_exe webstorm64.exe
 	{	
 		WinActivate
 	} Return
 
-#v:: 
+#v:: ;vscode 
 IfWinExist, ahk_exe Code.exe
 	{	
 		WinActivate
 	} Return
 
-#n:: 
+#n:: ;notepad 
 IfWinExist, ahk_exe Notepad.exe
 	{	
 		WinActivate
 	} Return
 
-#m:: 
+#m:: ; whastapp
 IfWinExist, ahk_exe WhatsApp.exe
 	{	
 		WinActivate
 	} Return
 
-#u:: 
+#u:: ; ubuntu wsl
 IfWinExist, ahk_exe ubuntu.exe
 	{	
 		WinActivate
 	} Return
 
-#g:: 
+#g:: ; datagrip 
 IfWinExist, ahk_exe datagrip64.exe
 	{	
 		WinActivate
 	} Return
 
-#a::
+#a:: ; cmd
 IfWinExist, ahk_exe cmd.exe
 	{	
 		WinActivate
 	} Return
 
-#s::
+#s:: ; sublime
 IfWinExist, ahk_exe sublime_text.exe
 	{	
 		WinActivate
 	} Return
 
-#z::
+#z:: ; powershell
 IfWinExist, ahk_exe powershell.exe
 	{	
 		WinActivate
 	} Return
 
-#f::
+#f:: ; fork
 IfWinExist, ahk_exe Fork.exe
 	{	
 		WinActivate
 	} Return
+
