@@ -8,12 +8,7 @@ SetTitleMatchMode, regex
 
 ; don't use powertoys
 Capslock::LCtrl
-
-; dbl tap rctrl for esc
-~LCtrl::
-If (A_PriorHotKey = "~LCtrl" AND A_TimeSincePriorHotkey < 500)
-Send, {Esc}
-Return
+; buggy in apex
 
 ; vim like movements
 ^j:: Send {Down}
