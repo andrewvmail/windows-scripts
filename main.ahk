@@ -3,6 +3,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTitleMatchMode, regex
+SetNumLockState, AlwaysOff 
+SetCapsLockState, AlwaysOff
+SetScrollLockState, AlwaysOff
+#MaxHotkeysPerInterval,50000
 
 ; https://www.autohotkey.com/boards/viewtopic.php?t=33437
 Gui, -Caption
