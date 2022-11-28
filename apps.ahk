@@ -64,3 +64,8 @@ IfWinExist, ahk_exe Fork.exe
 		WinActivate
 	} Return
 
+>!e:: ; electron app 
+IfWinExist, ahk_exe electron.exe
+	{	
+		WinActivate
+	} Return
