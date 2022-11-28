@@ -1,12 +1,11 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿#NoEnv 
+SendMode, Input
+SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, regex
 SetNumLockState, AlwaysOff 
 SetCapsLockState, AlwaysOff
 SetScrollLockState, AlwaysOff
-#MaxHotkeysPerInterval,50000
+#MaxHotkeysPerInterval, 999
 
 ; https://www.autohotkey.com/boards/viewtopic.php?t=33437
 Gui, -Caption
@@ -57,15 +56,12 @@ Hotkeys(ByRef Hotkeys)
 
 #include apps.ahk
 
-; don't use powertoys
-Capslock::LCtrl ; Capslock is remap to Left Control
-; buggy in apex
 
 ; vim like movements
-^j:: Send {Down} ; down
-^k:: Send {Up} ; up
-^h:: Send {Left} ; left 
-^l:: Send {Right} ; right
+*^j:: Send {Down} ; down
+*^k:: Send {Up} ; up
+*^h:: Send {Left} ; left
+*^l:: Send {Right} ; right
 
 ; alt ctrl 4
 !^4:: Send !{f4} ; close window
