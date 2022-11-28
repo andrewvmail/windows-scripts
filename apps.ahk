@@ -69,3 +69,9 @@ IfWinExist, ahk_exe electron.exe
 	{	
 		WinActivate
 	} Return
+
+>!t:: ; trello
+IfWinExist, ahk_exe Trello.exe
+	{	
+		WinActivate
+	} Return
