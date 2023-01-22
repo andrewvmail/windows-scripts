@@ -71,8 +71,8 @@ Hotkeys(ByRef Hotkeys)
 Return
 
 ; always on top
-^+SPACE::  Winset, Alwaysontop, , A ; always on top
-Return
+; ^+SPACE::  Winset, Alwaysontop, , A ; always on top
+; Return
 
 ^+r:: ; reload ahk
   Send, ^s ; To save a changed script
