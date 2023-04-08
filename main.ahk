@@ -28,10 +28,9 @@ Hotkeys(ByRef Hotkeys)
     FileRead, MainScript, %a_scriptdir%\main.ahk
     MainScript:=  RegExReplace(MainScript, "ms`a)^\s*/\*.*?^\s*\*/\s*|^\s*\(.*?^\s*\)\s*")
     
-    FileRead, AppsScript, %a_scriptdir%\apps.ahk
-    AppsScript:=  RegExReplace(AppsScript, "ms`a)^\s*/\*.*?^\s*\*/\s*|^\s*\(.*?^\s*\)\s*")
 
-    MergedScript = %MainScript%%AppsScript%
+
+    MergedScript = %MainScript%
 
     Hotkeys := {}
     Loop, Parse, MergedScript, `n, `r
@@ -53,8 +52,6 @@ Hotkeys(ByRef Hotkeys)
     return Hotkeys
 }
 
-
-#include apps.ahk
 
 
 ; vim like movements
